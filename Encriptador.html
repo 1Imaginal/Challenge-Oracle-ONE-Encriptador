@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="esp">
+    <meta charset="UTF-8">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <title>Encriptador </title>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="encriptador.js"></script>
+    </head>s
+    <body>
+        <h1 class="titulo">Encriptador de texto Juan Pablo Pinto Ruiz</h3 >
+        <main class="main container">
+            <div class="columna-container">
+                <div class="columna-input">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="input" name="input"></textarea>
+                        <label for="floatingTextarea">Inserte el texto aqui</label>
+                      </div>
+                    <div class="button container">
+                        <button type="button" onclick="encriptar()" id="encriptar">Encriptar</button>
+                        <button type="button" onclick="desencriptar()" id="desencriptar">Desencriptar</button>
+                    </div>
+            </div>
+            <div class="columna-container">
+                <div class="columna-output">
+                    <p class="output" id="output">"Ningun texto enviado"</p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
