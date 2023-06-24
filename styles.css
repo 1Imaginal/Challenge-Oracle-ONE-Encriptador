@@ -21,6 +21,7 @@ main {
 
 .columna-container {
     display: flex;
+    width: 90%;
 }
 
 .columna-input, .columna-output {
@@ -57,4 +58,16 @@ main {
     background: lightcyan;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     align-items: center;
+}
+
+button {
+    margin-top: 1em;
+    border-radius: 1.5em;
+    width: 45%;
+    height: 50px;
+}
+
+#encriptar {
+    background-color: coral;
+    color: azure;
 }
