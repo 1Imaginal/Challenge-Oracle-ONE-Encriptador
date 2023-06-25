@@ -11,9 +11,12 @@ function encriptar() {
     let caracteres_agregados = 0;
     for (let i = 0; i < num_caracteres; i++) {
         if (key.has(texto[i])) {
+            texto_encriptado = texto_encriptado.slice(0,i + caracteres_agregados + 1) + key.get(texto[i]) + texto.slice(i + 1);
+            console.log(texto_encriptado.slice(0,i + caracteres_agregados + 1));
+            console.log(key.get(texto[i]))
+            console.log(texto.slice(i + caracteres_agregados + 1))
             caracteres_agregados += key.get(texto[i]).length;
-            texto_encriptado = texto_encriptado.slice(0,i + caracteres_agregados) + key.get(texto[i]) + texto.slice(i + caracteres_agregados);
-            console.log(texto_encriptado);
+            console.log(caracteres_agregados)
         }
     }
     let output_texto = document.getElementById("output")
