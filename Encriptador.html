@@ -2,31 +2,58 @@
 <html lang="esp">
     <meta charset="UTF-8">
     <head>
+        <link rel="icon" href="https://static.vecteezy.com/system/resources/previews/012/674/781/original/lock-icon-clipart-free-png.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="styles.css">
-        <title>Encriptador </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
         <script src="encriptador.js"></script>
+        <title>Encriptador de texto</title>
     </head>
     <body>
-        <h1 class="titulo">Challenge Encriptador</h3 >
+        <header>
+            <a href="https://www.aluracursos.com/">
+                <img src="Imagenes/Logo2.png" class="logo">
+            </a>
+        </header>
         <main class="main container">
             <div class="columna-container">
                 <div class="columna-input">
                     <div class="form-floating">
                         <textarea class="form-control" placeholder="Leave a comment here" id="input" name="input"></textarea>
-                        <label for="floatingTextarea">Inserte el texto aqui</label>
+                        <label for="floatingTextarea" id="input_placeholder">Inserte el mensaje a encriptar o desencriptar</label>
                       </div>
-                    <div class="button container">
-                        <button type="button" onclick="encriptar()" id="encriptar">Encriptar</button>
-                        <button type="button" onclick="desencriptar()" id="desencriptar">Desencriptar</button>
-                    </div>
+                </div>
             </div>
             <div class="columna-container">
                 <div class="columna-output">
-                    <p class="output" id="output">"Ningun texto enviado"</p>
+                    <p class="output" id="output">Ningun mensaje enviado<img src="Imagenes/Muñeco.png" align="center" style="margin-top: 1em;"></p>
+                    <p id="footer-imagen" align="center">¡Envía un mensaje para encriptar!</p>
+                    <button type="button" id="copiar" onclick="copiar()" data-bs-toggle="popover" data-placement="top" data-bs-content="Texto copiado">
+                        Copiar
+                        </button>
+                    <script type="text/javascript">
+                        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+                        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+                        return new bootstrap.Popover(popoverTriggerEl);
+                      });
+                      </script>
                 </div>
             </div>
         </main>
+        <div class="button-container">
+            <button type="button" onclick="encriptar()" id="encriptar">Encriptar</button>
+            <button type="button" onclick="desencriptar()" id="desencriptar">Desencriptar</button>
+        </div>
+        <footer>
+            <p>&copy Copyright por Juan Pablo Pinto Ruiz - 2023 - Alura Oracle Next Education
+                <a href="https://www.linkedin.com/in/juanpablopintoruiz/">
+                    <img src="https://static.vecteezy.com/system/resources/previews/018/930/587/original/linkedin-logo-linkedin-icon-transparent-free-png.png" id="linkedin">
+                </a>
+                <a href="https://github.com/1Imaginal">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" id="github">
+                </a>
+            </p>
     </body>
 </html>

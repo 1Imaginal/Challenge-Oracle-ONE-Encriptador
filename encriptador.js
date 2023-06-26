@@ -18,6 +18,8 @@ function encriptar() {
     }
     let output_texto = document.getElementById("output")
     output_texto.innerHTML = texto_encriptado;
+    document.getElementById("footer-imagen").style.display = "none";
+    mostrarBoton();
 }
 
 function desencriptar() {
@@ -33,4 +35,16 @@ function desencriptar() {
     }
     let output_texto = document.getElementById("output")
     output_texto.innerHTML = texto_desencriptado;
+    document.getElementById("footer-imagen").style.display = "none";
+    mostrarBoton();
+}
+
+function mostrarBoton() {
+    let boton = document.getElementById("copiar");
+    boton.style.display = "block";
+}
+
+function copiar() {
+    let mensaje = document.getElementById("output").innerText;
+    navigator.clipboard.writeText(mensaje);
 }
